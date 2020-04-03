@@ -3,6 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.2",
+    "axios-hooks": "^1.9.0",
+    "framer-motion": "^1.10.3",
+    "polished": "^3.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "styled-components": "^5.0.1",
+    "styled-media-query": "^2.1.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@craco/craco": "^5.6.4",
     "@hot-loader/react-dom": "^16.13.0",
     "@storybook/addon-actions": "^5.3.17",
@@ -21,10 +35,10 @@
     "@types/styled-components": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
-    "axios": "^0.19.2",
-    "axios-hooks": "^1.9.0",
     "babel-plugin-root-import": "^6.5.0",
+    "commitizen": "^4.0.3",
     "craco-plugin-react-hot-reload": "^0.1.0",
+    "cross-env": "^7.0.2",
     "customize-cra": "^0.9.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -37,16 +51,11 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
-    "framer-motion": "^1.10.3",
-    "polished": "^3.5.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
     "prettier": "^2.0.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.20",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
     "storybook-addon-react-docgen": "^1.2.28",
-    "styled-components": "^5.0.1",
     "stylelint": "^13.2.1",
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-prettier": "^1.1.2",
@@ -74,6 +83,22 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.tsx": [
+      "eslint --fix",
+      "cross-env CI=true jest --bail --findRelatedTests"
+    ],
+    "*.ts": [
+      "eslint --fix",
+      "cross-env CI=true jest --bail --findRelatedTests"
     ]
   }
 }
