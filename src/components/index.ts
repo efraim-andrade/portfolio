@@ -1,3 +1,2 @@
-import ThatsMe from './ThatsMe';
-
-export { ThatsMe };
+export { default as Menu } from './Menu';
+export { default as ThatsMe } from './ThatsMe';

@@ -17,7 +17,6 @@ export default createGlobalStyle`
   html, body, #root {
     height: 100%;
 
-    /* a cada 1rem será considera 10px */
     font-size: 62.5%;
   }
 
@@ -27,7 +26,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font: 1.6rem 'Roboto', sans-serif;
+    font: 1.6rem 'Montserrat', sans-serif;
   }
 
   a {
