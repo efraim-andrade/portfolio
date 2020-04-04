@@ -1,5 +1,5 @@
 {
-  "plugins": ["stylelint-prettier"],
+  "plugins": ["stylelint-prettier", "@signal-noise/stylelint-scales"],
   "rules": {
     "prettier/prettier": true,
     "rule-empty-line-before": [
@@ -180,6 +180,13 @@
         }
       ],
       { "unspecified": "bottom" }
+    ],
+
+    "scales/font-size": [[1.6, 2.4, 3.2, 4.0, 4.8], { "unit": "rem" }],
+    "scales/radii": [[0.6, 0.8, 1.6], { "unit": "rem" }],
+    "scales/space": [
+      [0.4, 0.8, 1.6, 2.4, 3.2, 4.0, 8.0, 11.6, 12.6],
+      { "unit": "rem" }
     ]
   },
   "extends": ["stylelint-config-idiomatic-order"],
