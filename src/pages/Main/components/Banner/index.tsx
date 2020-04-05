@@ -1,8 +1,32 @@
 import React from 'react';
+import {
+  InstagramAlt,
+  LinkedinSquare,
+  Medium,
+  Twitter,
+  Github,
+} from '@styled-icons/boxicons-logos';
+import { DownArrowAlt } from '@styled-icons/boxicons-regular';
 
-import { Menu } from '~/components';
+import { Menu, ToggleTheme } from '~/components';
 
 import { Container } from './styles';
+
+const socials = [
+  { id: 0, icon: <Github />, link: 'https://github.com/efraim-andrade' },
+  {
+    id: 1,
+    icon: <LinkedinSquare />,
+    link: 'https://www.linkedin.com/in/efraim-andrade-morais-junior-517b0a149/',
+  },
+  {
+    id: 2,
+    icon: <InstagramAlt />,
+    link: 'https://www.instagram.com/efraim.am/',
+  },
+  { id: 3, icon: <Twitter />, link: 'https://twitter.com/DevEfraim' },
+  { id: 4, icon: <Medium />, link: 'https://medium.com/@efraim.dev' },
+];
 
 const Banner: React.FC = () => {
   return (
@@ -24,7 +48,27 @@ const Banner: React.FC = () => {
       </div>
 
       <footer>
-        <p>many things</p>
+        <div className="socials">
+          {socials.map((link) => (
+            <a
+              key={link.id}
+              target="_blank"
+              href={link.link}
+              className="link"
+              rel="noopener noreferrer"
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
+
+        <a href="#work" className="anchor-down">
+          <DownArrowAlt />
+        </a>
+
+        <div className="toggle">
+          <ToggleTheme />
+        </div>
       </footer>
     </Container>
   );
