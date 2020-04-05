@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { ThatsMe, Menu } from '~/components';
+import { ThatsMe } from '~/components';
 
+import { Banner } from './components';
 import { Container } from './styles';
 
 export default function Main() {
   return (
     <Container>
-      <Menu />
+      <Banner />
 
       <ThatsMe />
     </Container>

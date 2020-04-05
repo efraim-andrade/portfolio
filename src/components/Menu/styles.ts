@@ -17,9 +17,9 @@ export const Container = styled.header`
       }
 
       > a {
-        font-size: 1.6rem;
-
         transition: 0.3s;
+        font-size: 1.6rem;
+        letter-spacing: 0.25rem;
         border-bottom: 1px solid transparent;
 
         &:hover {

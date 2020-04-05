@@ -1,6 +1,5 @@
 const path = require('path');
-reactHotReloadPlugin = require('craco-plugin-react-hot-reload');
-
+const reactHotReloadPlugin = require('craco-plugin-react-hot-reload');
 
 module.exports = {
   webpack: {
@@ -17,7 +16,7 @@ module.exports = {
   },
   plugins: [
     {
-      plugin: reactHotReloadPlugin
-    }
-  ]
+      plugin: reactHotReloadPlugin,
+    },
+  ],
 };
