@@ -18,6 +18,8 @@ export default createGlobalStyle`
     height: 100%;
 
     font-size: 62.5%;
+
+    background: ${({ theme }) => theme.colors.background};
   }
 
   body {

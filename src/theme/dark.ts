@@ -7,6 +7,7 @@ export default {
 
     background: '#282a36',
     text: '#f8f8f2',
+    white: '#fff',
 
     success: '#50fa7b',
     danger: '#ff5555',
