@@ -17,10 +17,11 @@ export const Container = styled.header`
       }
 
       > a {
-        transition: 0.3s;
+        border-bottom: 1px solid transparent;
+
         font-size: 1.6rem;
         letter-spacing: 0.25rem;
-        border-bottom: 1px solid transparent;
+        transition: 0.3s;
 
         &:hover {
           border-bottom-color: ${({ theme }) =>
