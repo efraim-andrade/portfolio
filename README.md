@@ -1,47 +1,42 @@
-# React Typescript Boilerplate
+<h1 align="center">
+  <img src="./src/assets/thats-me.svg" height="200"><br />
+  Efraim Andrade
+</h1>
 
-Boilerplate feito para acelerar a inicialização de um projeto feito em ReactJS + Typescript com toda a estrutura de pastas padrão e com ambiente de teste e documentação configurados.
+<h4 align="center">Welcome to my personal portfólio repository (work in progress)!</h4>
 
-## Projeto
+<p align="center">
+  <a href="#-technologies">Technologies</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contact">Contact</a>
+</p>
 
-Certifique-se que a versão do seu create-react-app é >=3.3.0
+<br />
 
-`create-react-app --version`
+<h3 align="center">
+  <a href="https://efraim-andrade.netlify.com/">Demo</a>
+</h3>
 
-Caso não seja utilize o comando abaixo para atualiza-lo
+<p align="center">
+  <img src="./src/assets/portfolio.gif" alt="Project Demo" />
+</p>
 
-`yarn i -g create-react-app`
+## 🏗 Technologies
 
-Para instalar como um template do Create React App
+That's the technologies used to build the portfólio:
 
-`create-react-app <nome_do_projeto> --template typescript-ea`
+- [ReactJS](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [create-react-app](https://create-react-app.dev/)
+- [Typescript-EA (CRA boilerplate)](https://www.npmjs.com/package/cra-template-typescript-ea)
+- [Polished](https://polished.js.org/)
+- [useSound](https://joshwcomeau.com/react/announcing-use-sound-react-hook/)
+- [styled-Icons](https://styled-icons.js.org/)
+- [styled-components](https://www.styled-components.com/)
+- [style-lint](https://stylelint.io/)
+- [eslint](https://eslint.org/)
+- [husky](https://github.com/typicode/husky)
+- [lint-staged](https://github.com/okonet/lint-staged)
 
----
+## 📮 Contact
 
-Instalar dependencias
-
-`$ yarn`
-
-Iniciar o projeto
-
-`$ yarn start`
-
----
-
-## Testes
-
-Rodar testes automatizados
-
-`$ yarn test`
-
-Verificar o quanto a aplicação foi testada
-
-`$ yarn coverage`
-
----
-
-## Documentação de Componentes
-
-Iniciar a documentação
-
-`$ yarn storybook`
+[Send me a message](https://www.linkedin.com/in/efraim-andrade-morais-junior-517b0a149/)
