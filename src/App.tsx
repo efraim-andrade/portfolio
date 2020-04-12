@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader';
 import { ThemeProvider } from 'styled-components';
 
 import Routes from '~/routes';
-import { dark, light, ThemeContext } from '~/theme';
 import GlobalStyles from '~/theme/global';
+import { dark, light, ThemeContext } from '~/theme';
+import usePersistedState from '~/functions/hooks/usePersistedState';
 
 function App() {
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = usePersistedState('theme', light);
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light);
