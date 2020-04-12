@@ -33,7 +33,11 @@ export const Container = styled.section`
       padding: 0 3.2rem;
       border: transparent;
       border-radius: 0.6rem;
-      box-shadow: 0 4px 10px ${({ theme }) => lighten(0.4, theme.colors.text)};
+      box-shadow: 0 4px 10px
+        ${({ theme }) =>
+          theme.title === 'light'
+            ? lighten(0.4, theme.colors.text)
+            : lighten(0.1, theme.colors.background)};
 
       display: inline-block;
 
@@ -49,7 +53,10 @@ export const Container = styled.section`
         transform: translateY(-2px);
 
         box-shadow: -2px 8px 12px
-          ${({ theme }) => lighten(0.4, theme.colors.text)};
+          ${({ theme }) =>
+            theme.title === 'light'
+              ? lighten(0.4, theme.colors.text)
+              : lighten(0.1, theme.colors.background)};
 
         background: ${({ theme }) => darken(0.05, theme.colors.danger)};
       }
