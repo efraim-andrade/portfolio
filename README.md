@@ -3,14 +3,18 @@
   Efraim Andrade
 </h1>
 
-<h4 align="center">Welcome to my personal portfólio repository!</h4>
+<h4 align="center">Welcome to my personal portfólio repository (work in progress)!</h4>
 
 <p align="center">
-  <a href="technologies">Technologies</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="contact">Contact</a>
+  <a href="#-technologies">Technologies</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contact">Contact</a>
 </p>
 
 <br />
+
+<h3 align="center">
+  <a href="https://efraim-andrade.netlify.com/">Demo</a>
+</h3>
 
 <p align="center">
   <img src="./src/assets/portfolio.gif" alt="Project Demo" />
