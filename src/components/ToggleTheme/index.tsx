@@ -1,18 +1,22 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import useSound from 'use-sound';
 
 import switchSound from '~/assets/theme-switch.wav';
+import { ThemeContext } from '~/theme';
 
 import { Container, Sun, Moon, Switch } from './styles';
 
 const ToggleTheme: React.FC = ({ ...rest }) => {
-  const [isActive, setIsActive] = useState(false);
   const [playSound] = useSound(switchSound);
+  const { toggleTheme } = useContext(ThemeContext);
+
+  const [isActive, setIsActive] = useState(false);
 
   const handleChange = useCallback(() => {
     playSound({});
     setIsActive(!isActive);
-  }, [playSound, isActive]);
+    toggleTheme();
+  }, [playSound, isActive, toggleTheme]);
 
   return (
     <Container {...rest}>

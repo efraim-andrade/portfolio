@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { hot } from 'react-hot-loader';
 import { ThemeProvider } from 'styled-components';
 
 import Routes from '~/routes';
-import light from '~/theme/light';
+import { dark, light, ThemeContext } from '~/theme';
 import GlobalStyles from '~/theme/global';
 
 function App() {
-  return (
-    <ThemeProvider theme={light}>
-      <GlobalStyles />
+  const [theme, setTheme] = useState(light);
 
-      <Routes />
-    </ThemeProvider>
+  const toggleTheme = () => {
+    setTheme(theme.title === 'light' ? dark : light);
+  };
+
+  return (
+    <ThemeContext.Provider value={{ toggleTheme }}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+
+        <Routes />
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
 }
 
