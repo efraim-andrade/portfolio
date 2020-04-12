@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import {
   InstagramAlt,
   LinkedinSquare,
@@ -29,6 +30,17 @@ const socials = [
 ];
 
 const Banner: React.FC = () => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      controls.start({
+        marginRight: '0rem',
+        transition: { duration: 1 },
+      });
+    }, 2400);
+  }, [controls]);
+
   return (
     <Container>
       <Menu />
@@ -66,9 +78,9 @@ const Banner: React.FC = () => {
           <DownArrowAlt />
         </a>
 
-        <div className="toggle">
+        <motion.div className="toggle" animate={controls}>
           <ToggleTheme />
-        </div>
+        </motion.div>
       </footer>
     </Container>
   );

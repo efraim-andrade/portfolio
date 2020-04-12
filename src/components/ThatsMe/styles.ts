@@ -1,12 +1,14 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   position: fixed;
-  bottom: -10.4rem;
   right: -2rem;
+  bottom: -24rem;
+  /* bottom: -10.4rem; */
 
-  height: 25.4rem;
   width: 19.8rem;
+  height: 25.4rem;
 
   > svg {
     height: 100%;

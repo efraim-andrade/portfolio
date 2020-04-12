@@ -36,6 +36,7 @@ That's the technologies used to build the portfólio:
 - [eslint](https://eslint.org/)
 - [husky](https://github.com/typicode/husky)
 - [lint-staged](https://github.com/okonet/lint-staged)
+- [Framer Motion](https://www.framer.com/motion/)
 
 ## 📮 Contact
 

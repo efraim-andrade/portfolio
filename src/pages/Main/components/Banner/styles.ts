@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { lighten, darken } from 'polished';
-import media from 'styled-media-query';
 
 export const Container = styled.section`
   height: 100vh;
@@ -112,15 +111,14 @@ export const Container = styled.section`
     }
 
     > .toggle {
+      z-index: 10;
+
       width: 19rem;
+      margin-right: 11.6rem;
 
       display: flex;
       align-items: center;
       justify-content: flex-end;
-
-      ${media.lessThan('huge')`
-        margin-right: 12rem;
-      `}
     }
   }
 `;
