@@ -1,16 +1,27 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
+import { useAnimation } from 'framer-motion';
 
 import { Container } from './styles';
 import items from './items';
 
 const Menu: React.FC = () => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      controls.start({
+        width: '75%',
+      });
+    }, 7600);
+  }, [controls]);
+
   const handleExternalLinks = useCallback(
     (item: string) => item.includes('https://'),
     []
   );
 
   return (
-    <Container>
+    <Container animate={controls}>
       <ul>
         {items.map((item) => (
           <li key={item.id}>

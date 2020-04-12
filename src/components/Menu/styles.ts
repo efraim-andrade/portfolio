@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
+import { motion, HTMLMotionProps, ForwardRefComponent } from 'framer-motion';
 
-export const Container = styled.header`
+export const Container = styled(motion.div).attrs(
+  (props: ForwardRefComponent<HTMLDivElement, HTMLMotionProps<'div'>>) => props
+)`
   margin-top: 4rem;
 
   display: flex;
