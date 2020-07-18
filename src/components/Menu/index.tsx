@@ -8,11 +8,15 @@ const Menu: React.FC = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    setTimeout(() => {
-      controls.start({
-        width: '75%',
-      });
-    }, 7600);
+    const isDesktop = window.innerWidth > 1200;
+
+    if (isDesktop) {
+      setTimeout(() => {
+        controls.start({
+          width: '75%',
+        });
+      }, 7600);
+    }
   }, [controls]);
 
   const handleExternalLinks = useCallback(
