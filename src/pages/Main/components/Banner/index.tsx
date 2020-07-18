@@ -33,12 +33,16 @@ const Banner: React.FC = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    setTimeout(() => {
-      controls.start({
-        marginRight: '0rem',
-        transition: { duration: 1 },
-      });
-    }, 2400);
+    const isDesktop = window.innerWidth > 1200;
+
+    if (isDesktop) {
+      setTimeout(() => {
+        controls.start({
+          marginRight: '0rem',
+          transition: { duration: 1 },
+        });
+      }, 2400);
+    }
   }, [controls]);
 
   return (

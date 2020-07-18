@@ -8,8 +8,19 @@ export const Container = styled.section`
   flex-direction: column;
   justify-content: space-between;
 
+  @media screen and (max-width: 1200px) {
+    padding-top: 4rem;
+
+    flex-direction: column-reverse;
+  }
+
   .presentation {
     margin-top: -4rem;
+
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     h1 {
       margin-bottom: 2.4rem;
@@ -17,6 +28,13 @@ export const Container = styled.section`
       font-weight: 600;
       font-size: 4.8rem;
       line-height: 1;
+
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 1.6rem;
+
+        font-size: 2.4rem;
+        text-align: center;
+      }
     }
 
     h2 {
@@ -25,6 +43,11 @@ export const Container = styled.section`
       line-height: 1;
       font-weight: 400;
       font-size: 3.2rem;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 1.6rem;
+        text-align: center;
+      }
     }
 
     .mail-me {
@@ -40,13 +63,22 @@ export const Container = styled.section`
 
       display: inline-block;
 
+      font-weight: 700;
+      transition: 0.3s;
       font-size: 2.4rem;
       line-height: 5rem;
       color: ${({ theme }) => theme.colors.white};
       background: ${({ theme }) => theme.colors.danger};
 
-      font-weight: 700;
-      transition: 0.3s;
+      @media screen and (max-width: 1200px) {
+        height: 4rem;
+        width: 180px;
+        margin: 0 auto;
+
+        font-size: 1.6rem;
+        line-height: 4rem;
+        text-align: center;
+      }
 
       &:hover {
         transform: translateY(-2px);
@@ -72,8 +104,19 @@ export const Container = styled.section`
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 1200px) {
+      height: auto;
+
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+
     > .socials {
       width: 19rem;
+
+      @media screen and (max-width: 1200px) {
+        margin-top: 6rem;
+      }
 
       > .link {
         margin-left: 0.8rem;
@@ -97,6 +140,10 @@ export const Container = styled.section`
 
       transform: translateX(-50%);
 
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+
       > svg {
         height: 4rem;
 
@@ -119,6 +166,12 @@ export const Container = styled.section`
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
+      @media screen and (max-width: 1200px) {
+        margin-right: 0;
+
+        justify-content: center;
+      }
     }
   }
 `;
