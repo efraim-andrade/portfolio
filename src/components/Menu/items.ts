@@ -1,5 +1,5 @@
 export default [
-  { id: 0, title: 'View my work', link: '#work' },
+  { id: 0, title: 'View my work', link: 'https://github.com/efraim-andrade' },
   {
     id: 1,
     title: 'Download resume',
