@@ -7,7 +7,7 @@ import {
   Twitter,
   Github,
 } from '@styled-icons/boxicons-logos';
-import { DownArrowAlt } from '@styled-icons/boxicons-regular';
+// import { DownArrowAlt } from '@styled-icons/boxicons-regular';
 
 import { Menu, ToggleTheme } from '~/components';
 
@@ -79,7 +79,7 @@ const Banner: React.FC = () => {
         </div>
 
         <a href="#work" className="anchor-down">
-          <DownArrowAlt />
+          {/* <DownArrowAlt /> */}
         </a>
 
         <motion.div className="toggle" animate={controls}>
