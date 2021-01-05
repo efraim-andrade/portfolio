@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "axios-hooks": "^1.9.0",
     "framer-motion": "^1.10.3",
     "polished": "^3.5.1",
